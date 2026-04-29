@@ -6,7 +6,7 @@ on:
         type: choice
         description: "配置文件"
         required: true
-        default: oneplus_ace2_pro_b
+        default: gt6_b
         options:
           - oneplus_nord_n30_se_5g_v
           - oneplus_10r_v
@@ -61,6 +61,7 @@ on:
           - oneplus_15_aosp
           - oneplus_15t
           - oneplus_15t_aosp
+          - gt6_b
       MANAGER_SOURCE:
         type: choice
         description: "管理器调用方向"
@@ -73,7 +74,7 @@ on:
         type: choice
         description: "SUSFS模块下载调用方向"
         required: true
-        default: CI
+        default: N/A
         options:
           - CI
           - Release
@@ -82,7 +83,7 @@ on:
         type: choice
         description: "内核模块实现方式"
         required: true
-        default: KPN
+        default: N/A
         options:
           - KPM
           - KPN
@@ -96,22 +97,22 @@ on:
         type: string
         description: "动态清单仓库所有者"
         required: true
-        default: "Numbersf"
+        default: "qiulai22"
       BUILD_TIME:
         type: string
         description: "自定义构建时间(输入F使用当前UTC时间)"
         required: false
-        default: "Fri Dec 12 11:37:03 UTC 2025"
+        default: "Thu Aug 14 07:43:17 UTC 2025"
       ZRAM:
         type: string
         description: "ZRAM(0关闭1开启)/算法名/大小"
         required: true
-        default: "0/lz4kd/8589934592"
+        default: "1/lz4kd/8589934592"
       SUFFIX:
         type: string
         description: "自定义内核后缀(不输入使用随机字符串)"
         required: false
-        default: ""
+        default: "3-o-g1ae3f90f977f3d"
       SUBLEVEL:
         description: "自定义内核等级欺骗(SUBLEVEL)"
         required: false
